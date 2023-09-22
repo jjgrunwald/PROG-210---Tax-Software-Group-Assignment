@@ -28,12 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            txtbxIncome = new TextBox();
+            bttnSubmit = new Button();
+            SuspendLayout();
+            // 
+            // txtbxIncome
+            // 
+            txtbxIncome.Location = new Point(240, 170);
+            txtbxIncome.Name = "txtbxIncome";
+            txtbxIncome.Size = new Size(202, 23);
+            txtbxIncome.TabIndex = 0;
+            // 
+            // bttnSubmit
+            // 
+            bttnSubmit.Location = new Point(478, 169);
+            bttnSubmit.Name = "bttnSubmit";
+            bttnSubmit.Size = new Size(75, 23);
+            bttnSubmit.TabIndex = 1;
+            bttnSubmit.Text = "Submit";
+            bttnSubmit.UseVisualStyleBackColor = true;
+            bttnSubmit.Click += bttnSubmit_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(bttnSubmit);
+            Controls.Add(txtbxIncome);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox txtbxIncome;
+        private Button bttnSubmit;
     }
 }
