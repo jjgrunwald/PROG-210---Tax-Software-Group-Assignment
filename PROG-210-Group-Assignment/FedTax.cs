@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace PROG_210_Group_Assignment
 {
-    internal class FedTax
+    public class FedTax
     {
+        public decimal federaltaxcalc(decimal taxcalc)
+        {
+            return 0;
+        }
     }
 }
