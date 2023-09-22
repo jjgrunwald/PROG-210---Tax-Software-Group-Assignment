@@ -13,5 +13,23 @@ namespace PROG_210_Assignment_Test
             Assert.AreEqual(375, result);
 
         }
+
+        [TestMethod]
+        public void CalcFedTax_25000()
+        {
+            FedTax tax = new FedTax();
+            decimal result = tax.federaltaxcalc(25000);
+            Assert.AreEqual(3750, result);
+
+        }
+
+        [TestMethod]
+        public void CalcFedTax_56000()
+        {
+            FedTax tax = new FedTax();
+            decimal result = tax.federaltaxcalc(56000);
+            Assert.AreEqual(541.405m+8003.85m, result);
+
+        }
     }
 }
