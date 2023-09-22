@@ -15,7 +15,6 @@ namespace PROG_210_Group_Assignment
         private void bttnSubmit_Click(object sender, EventArgs e)
         {
             income = decimal.Parse(bttnSubmit.Text);
-
         }
     }
 }
