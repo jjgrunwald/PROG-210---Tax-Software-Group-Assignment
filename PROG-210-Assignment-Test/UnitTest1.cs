@@ -55,13 +55,44 @@ namespace PROG_210_Assignment_Test
                         }
                         if (income > 82913 && income < 148027)
                         {
-
+                            taxrate = 0.158m;
+                        }
+                        if (income > 148027 && income < 207239)
+                        {
+                            taxrate = 0.178m;
                         }
 
-
+                        if (income > 207239 && income < 264750)
+                        {
+                            taxrate = 0.198m;
+                        }
+                        if (income > 264750 && income < 529500)
+                        {
+                            taxrate = 0.208m;
+                        }
+                        if (income > 529500 && income < 1059000)
+                        {
+                            taxrate = 0.213m;
+                        }
+                        if (income > 1059000)
+                        {
+                            taxrate = 0.218m;
+                        }
                         break;
                     case "Prince Edward Island":
                         MessageBox.Show("Hi");
+                        if (income <= 31984)
+                        {
+                            taxrate = 0.098m;
+                        }
+                        if (income > 31984 && income < 63969)
+                        {
+                            taxrate = 0.138m;
+                        }
+                        if (income > 63969)
+                        {
+                            taxrate = 0.167m;
+                        }
 
                         break;
                     case "Nova Scotia":
