@@ -21,7 +21,12 @@ namespace PROG_210_Group_Assignment
         string[] provinceList = { "Alberta",  "British Columbia", "Saskatchewan",
                                     "North West Territories", "Ontario", "Nova Scotia"};
 
-        Image ab = new Bitmap("../images/ab.png");
+        Image ab = new Bitmap("../../images/ab.png");
+        Image bc = new Bitmap("../../images/bc.png");
+        Image nb = new Bitmap("../../images/nb.png");
+        Image ns = new Bitmap("../../images/ns.png");
+        Image on = new Bitmap("../../images/on.png");
+        Image sk = new Bitmap("../../images/sk.png");
 
         private void bttnSubmit_Click(object sender, EventArgs e)
         {
@@ -36,7 +41,26 @@ namespace PROG_210_Group_Assignment
 
         private void cmbxProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (cmbxProvince.SelectedIndex)
+            {
+                case 0:
+                    picbxCanada.Image = ab;
+                    break;
+                case 1:
+                    picbxCanada.Image = bc;
+                    break;
+                case 2:
+                    picbxCanada.Image = sk;
+                    break;
+                case 3:
+                    picbxCanada.Image = nb;
+                break;
+                case 4:
+                    picbxCanada.Image = on;
+                    break;
+                case 5:
+                    picbxCanada.Image = ns;
+                    break;
 
-        }
-    }
-}
+            }
+        } } }

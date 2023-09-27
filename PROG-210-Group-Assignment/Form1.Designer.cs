@@ -31,8 +31,8 @@
             txtbxIncome = new TextBox();
             bttnSubmit = new Button();
             cmbxProvince = new ComboBox();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            picbxCanada = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picbxCanada).BeginInit();
             SuspendLayout();
             // 
             // txtbxIncome
@@ -62,27 +62,27 @@
             cmbxProvince.TabIndex = 2;
             cmbxProvince.SelectedIndexChanged += cmbxProvince_SelectedIndexChanged;
             // 
-            // pictureBox1
+            // picbxCanada
             // 
-            pictureBox1.Image = Properties.Resources.canada_map;
-            pictureBox1.Location = new Point(241, 58);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(289, 254);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            picbxCanada.Image = Properties.Resources.canada_map;
+            picbxCanada.Location = new Point(241, 58);
+            picbxCanada.Name = "picbxCanada";
+            picbxCanada.Size = new Size(289, 254);
+            picbxCanada.TabIndex = 3;
+            picbxCanada.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            Controls.Add(picbxCanada);
             Controls.Add(cmbxProvince);
             Controls.Add(bttnSubmit);
             Controls.Add(txtbxIncome);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picbxCanada).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -92,6 +92,6 @@
         private TextBox txtbxIncome;
         private Button bttnSubmit;
         private ComboBox cmbxProvince;
-        private PictureBox pictureBox1;
+        private PictureBox picbxCanada;
     }
 }
