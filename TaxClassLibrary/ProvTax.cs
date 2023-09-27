@@ -78,11 +78,9 @@ namespace TaxClassLibrary
             }
             if (income > abIncome[3])
             {
-                tax += abTax[3] * abIncome[3];
+                tax += abTax[3] * income;
                 totalTaxed += tax;
             }
-
-
 
             return income + tax;
 
