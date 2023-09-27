@@ -19,7 +19,7 @@ namespace TaxClassLibrary
 
             decimal totalUntaxed = income;
 
-            //10%	on the portion of taxable income that is $142,292 or less, plus
+            //10% on the portion of taxable income that is $142,292 or less, plus
             if (income < abIncome[0])
             {
                 tax = abTax[0] * income;
@@ -31,7 +31,7 @@ namespace TaxClassLibrary
                 totalTaxed += tax;
             }
 
-            //12%	on the portion of taxable income over $142,292 up to $170,751, plus
+            //12% on the portion of taxable income over $142,292 up to $170,751, plus
             if (income >= abIncome[0] && income <= abIncome[1])
             {
                 totalUntaxed -= totalTaxed;
@@ -44,7 +44,7 @@ namespace TaxClassLibrary
                 totalTaxed += tax;
             }
 
-            //13%	on the portion of taxable income over $170,751 up to $227,668, plus
+            //13% on the portion of taxable income over $170,751 up to $227,668, plus
             if (income >= abIncome[1] && income <= abIncome[2])
             {
                 totalUntaxed -= totalTaxed;
@@ -57,7 +57,7 @@ namespace TaxClassLibrary
                 totalTaxed += tax;
             }
 
-            //14%	on the portion of taxable income over $227,668 up to $341,502, plus
+            //14% on the portion of taxable income over $227,668 up to $341,502, plus
             if (income >= abIncome[2] && income <= abIncome[3])
             {
                 totalUntaxed -= totalTaxed;
@@ -70,7 +70,7 @@ namespace TaxClassLibrary
                 totalTaxed += tax;
             }
 
-            //15 % on the portion of taxable income over $341,502
+            //15% on the portion of taxable income over $341,502
             if (income >= abIncome[3] && income <= abIncome[4])
             {
                 totalUntaxed -= totalTaxed;
