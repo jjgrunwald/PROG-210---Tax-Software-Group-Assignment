@@ -1,62 +1,106 @@
-﻿namespace TaxClassLibrary
-{
-    //I am going to write some comments with all of this code, so that way my team mates
-    //can review and better understand what is going on.        --J.J.
+using System.ComponentModel.Design;
+using System.Runtime.CompilerServices;
 
+namespace TaxClassLibrary
+{
     public class ProvTax
     {
+
         public decimal abTax(decimal income)
         {
+            
+            decimal[] abTax = { 0.10m, 0.12m, 0.13m, 0.14m, 0.15m };
+            decimal[] abIncome = { 142292m, 170751m, 227668m, 341502m };
 
-            //Here I am going to declare a variable called "tax", this variable is going
-            //to be used as a running tally of the applicable tax. Since we've already
-            //decide that our variable name is going to be "income" I'm going to simply
-            //add this to the "income" at the end of the method.
             decimal tax = 0;
 
-            //I am also going to make this variable called "totalTaxed" and what I'm
-            //going to do with this, is use it as a way to see how much income I have
-            //already applied tax to. This way I do not overtax on previous brackets.
             decimal totalTaxed = 0;
 
-            //Here I am declaring an array of decimals. This is easier than typing them
-            //out as seperate variables. This array will be refered to as "abTax" and
-            //I will input each of the tax rates for each province inside of their
-            //respective methods and arrays.
-            decimal[] abTax = { 0.10m, 0.12m, 0.13m, 0.14m, 0.15m };
+            decimal totalUntaxed = income;
 
-            //I am going to move the amount that I have for income into the amount for
-            //"totalTaxed", I'm going to want to keep these seperate as I'm going to
-            //subtract amounts from the "totalTaxed" variable.
-            totalUntaxed = income;
-
-            //This is going to represent the tax bracket that is the lowest,
-            //which in Alberta is anything less than $142,292. This will be
-            //tax 0 in our array, as it is the first, so that is what I'm going
-            //to apply and then add the total to the "taxed income" variable"
-
-            income * abTax[0] += decimal taxedIncome;
-            tax += taxedIncome;
-
-            //Income greater than $142,292
-            if (income => 142929)
+            //10% on the portion of taxable income that is $142,292 or less, plus
+            if (income < abIncome[0])
             {
-                //Since I'm not wanting to re-apply tax to income that's already been taxed,
-                //I'm going to subtract the "taxedIncome" from the "totalTaxed" and I'm going
-                //to continue to do this in each of the following 'if' statmenets.
-                totalUntaxed -+ taxedIncome;
-
-                income * abTax[1] += taxedIncome;
+                tax = abTax[0] * income;
+                totalTaxed += tax;
+            }
+            if (income > abIncome[0])
+            {
+                tax += abTax[0] * abIncome[0];
+                totalTaxed += tax;
             }
 
-/*            if (totalUntaxed )
+            //12% on the portion of taxable income over $142,292 up to $170,751, plus
+            if (income >= abIncome[0] && income <= abIncome[1])
+            {
+                totalUntaxed -= totalTaxed;
+                tax += totalUntaxed * abTax[1];
+                return income = tax;
+            }
+            if (income > abIncome[1])
+            {
+                tax += abTax[1] * abIncome[1];
+                totalTaxed += tax;
+            }
 
-            //Income greater than $341,502
-            if (income => 341502m)
+            //13% on the portion of taxable income over $170,751 up to $227,668, plus
+            if (income >= abIncome[1] && income <= abIncome[2])
+            {
+                totalUntaxed -= totalTaxed;
+                tax += totalUntaxed * abTax[2];
+                return income = tax ;
+            }
+            if (income > abIncome[2])
+            {
+                tax += abTax[2] * abIncome[2];
+                totalTaxed += tax;
+            }
+
+            //14% on the portion of taxable income over $227,668 up to $341,502, plus
+            if (income >= abIncome[2] && income <= abIncome[3])
+            {
+                totalUntaxed -= totalTaxed;
+                tax += totalUntaxed * abTax[3];
+                return income = tax;
+            }
+            if (income > abIncome[3])
+            {
+                tax += abTax[3] * abIncome[3];
+                totalTaxed += tax;
+            }
+
+            //15% on the portion of taxable income over $341,502
+            if (income >= abIncome[3] && income <= abIncome[4])
+            {
+                totalUntaxed -= totalTaxed;
+                tax += totalUntaxed * abTax[4];
+                return income = tax;
+            }
+            if (income > abIncome[3])
+            {
+                tax += abTax[3] * abIncome[3];
+                totalTaxed += tax;
+            }
+
+
+
+            return income + tax;
+
+            decimal taxedIncome = +tax;
+
+            //Income greater than $142,292
+            if (income >= abIncome[0])
+            {
+                tax = abTax[0] * abIncome[0];
+
+            }
+            
+            //Income Between 
+            if (income >= 142929)
             {
 
-            }*/
 
+            }
 
             return income + tax;
         }
@@ -71,7 +115,7 @@
             return 0;
         }
 
-        public decimal nwtTax(decimal income) 
+        public decimal nwtTax(decimal income)
         {
             return 0;
         }

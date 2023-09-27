@@ -15,6 +15,15 @@ namespace PROG_210_Assignment_Test
         }
 
         [TestMethod]
+        public void CalcProv_Tax_2500()
+        {
+            ProvTax tax = new ProvTax();
+            decimal result = tax.abTax(2500);
+            Assert.AreEqual(375, result);
+
+        }
+
+        [TestMethod]
         public void CalcFedTax_25000()
         {
             FedTax tax = new FedTax();
