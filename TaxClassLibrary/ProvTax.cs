@@ -28,25 +28,26 @@
             //I am going to move the amount that I have for income into the amount for
             //"totalTaxed", I'm going to want to keep these seperate as I'm going to
             //subtract amounts from the "totalTaxed" variable.
-            totalUntaxed = income;
+            decimal totalUntaxed = income;
 
             //This is going to represent the tax bracket that is the lowest,
             //which in Alberta is anything less than $142,292. This will be
             //tax 0 in our array, as it is the first, so that is what I'm going
             //to apply and then add the total to the "taxed income" variable"
 
-            income* abTax[0] += decimal taxedIncome;
+            decimal taxedIncome = abTax[0] * income;
+            
+
             tax += taxedIncome;
 
             //Income greater than $142,292
-            if (income => 142929)
+            if (income >= 142929)
             {
                 //Since I'm not wanting to re-apply tax to income that's already been taxed,
                 //I'm going to subtract the "taxedIncome" from the "totalTaxed" and I'm going
                 //to continue to do this in each of the following 'if' statmenets.
-                totalUntaxed - +taxedIncome;
+                totalUntaxed =-taxedIncome;
 
-                income* abTax[1] += taxedIncome;
             }
 
             /*            if (totalUntaxed )
@@ -88,5 +89,4 @@
 
 
     }
-}
 }
