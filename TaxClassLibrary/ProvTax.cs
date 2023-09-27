@@ -1,4 +1,6 @@
-﻿namespace TaxClassLibrary
+﻿using System.Runtime.CompilerServices;
+
+namespace TaxClassLibrary
 {
     //I am going to write some comments with all of this code, so that way my team mates
     //can review and better understand what is going on.        --J.J.
