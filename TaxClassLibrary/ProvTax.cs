@@ -51,9 +51,37 @@ namespace TaxClassLibrary
                 tax += totalUntaxed * abTax[2];
                 return income = tax ;
             }
+            if (income > abIncome[2])
+            {
+                tax += abTax[2] * abIncome[2];
+                totalTaxed += tax;
+            }
 
             //14%	on the portion of taxable income over $227,668 up to $341,502, plus
+            if (income >= abIncome[2] && income <= abIncome[3])
+            {
+                totalUntaxed -= totalTaxed;
+                tax += totalUntaxed * abTax[3];
+                return income = tax;
+            }
+            if (income > abIncome[3])
+            {
+                tax += abTax[3] * abIncome[3];
+                totalTaxed += tax;
+            }
+
             //15 % on the portion of taxable income over $341,502
+            if (income >= abIncome[3] && income <= abIncome[4])
+            {
+                totalUntaxed -= totalTaxed;
+                tax += totalUntaxed * abTax[4];
+                return income = tax;
+            }
+            if (income > abIncome[3])
+            {
+                tax += abTax[3] * abIncome[3];
+                totalTaxed += tax;
+            }
 
 
 
