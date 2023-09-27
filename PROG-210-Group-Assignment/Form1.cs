@@ -9,6 +9,8 @@ namespace PROG_210_Group_Assignment
 
         ProvTax provTax;
 
+        FedTax fedTax;
+
         public Form1()
         {
             InitializeComponent();
