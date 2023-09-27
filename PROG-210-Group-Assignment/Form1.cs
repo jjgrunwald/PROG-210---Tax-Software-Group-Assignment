@@ -29,7 +29,7 @@ namespace PROG_210_Group_Assignment
 
             income = decimal.Parse(bttnSubmit.Text);
             FedTax tax = new FedTax();
-            decimal fedTax = tax.federaltaxcalc(income);
+            decimal fedTax = tax.fedTax(income);
             ProvTax provTax = new ProvTax();
             decimal abTax = provTax.abTax(income);
         }
