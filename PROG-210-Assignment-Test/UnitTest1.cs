@@ -44,7 +44,6 @@ namespace PROG_210_Assignment_Test
                 switch (province)
                 {
                     case "Newfoundland and Labrador":
-                        MessageBox.Show("Hi");
                         if (income <= 41457)
                         {
                             taxrate = 0.087m;
@@ -80,7 +79,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Prince Edward Island":
-                        MessageBox.Show("Hi");
                         if (income <= 31984)
                         {
                             taxrate = 0.098m;
@@ -96,7 +94,6 @@ namespace PROG_210_Assignment_Test
 
                         break;
                     case "Nova Scotia":
-                        MessageBox.Show("Hi");
                         if (income <= 29590)
                         {
                             taxrate = 0.879m;
@@ -119,7 +116,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "New Brunswick":
-                        MessageBox.Show("Hi");
                         if (income <= 47715)
                         {
                             taxrate = 0.094m;
@@ -138,7 +134,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Quebec":
-                        MessageBox.Show("Hi");
                         if (income <= 49275)
                         {
                             taxrate = 0.14m;
@@ -157,7 +152,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Ontario":
-                        MessageBox.Show("Hi");
                         if (income <= 49231)
                         {
                             taxrate = 0.0505m;
@@ -180,7 +174,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Manitoba":
-                        MessageBox.Show("Hi");
                         if (income <= 36842)
                         {
                             taxrate = 0.108m;
@@ -195,7 +188,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Saskatchewan":
-                        MessageBox.Show("Hi");
                         if (income <= 49720)
                         {
                             taxrate = 0.105m;
@@ -210,7 +202,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Alberta":
-                        MessageBox.Show("Hi");
                         if (income <= 142292)
                         {
                             taxrate = 0.10m;
@@ -233,7 +224,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "British Columbia":
-                        MessageBox.Show("Hi");
                         if (income <= 45654)
                         {
                             taxrate = 0.0506m;
@@ -264,7 +254,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Yukon":
-                        MessageBox.Show("Hi");
                         if (income <= 53359)
                         {
                             taxrate = 0.064m;
@@ -287,7 +276,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Northwest Territories":
-                        MessageBox.Show("Hi");
                         if (income <= 48326)
                         {
                             taxrate = 0.059m;
@@ -306,7 +294,6 @@ namespace PROG_210_Assignment_Test
                         }
                         break;
                     case "Nunavut":
-                        MessageBox.Show("Hi");
                         if (income <= 50877)
                         {
                             taxrate = 0.04m;
