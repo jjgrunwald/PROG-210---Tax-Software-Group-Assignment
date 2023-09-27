@@ -10,7 +10,50 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="bin\images\ab.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\images\sk.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\images\on.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\images\ns.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\images\nb.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\images\canada_map.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\images\bc.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TaxClassLibrary\TaxClassLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

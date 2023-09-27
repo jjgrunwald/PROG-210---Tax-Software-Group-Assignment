@@ -30,18 +30,21 @@
         {
             txtbxIncome = new TextBox();
             bttnSubmit = new Button();
+            cmbxProvince = new ComboBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtbxIncome
             // 
-            txtbxIncome.Location = new Point(240, 170);
+            txtbxIncome.Location = new Point(348, 364);
             txtbxIncome.Name = "txtbxIncome";
             txtbxIncome.Size = new Size(202, 23);
             txtbxIncome.TabIndex = 0;
             // 
             // bttnSubmit
             // 
-            bttnSubmit.Location = new Point(478, 169);
+            bttnSubmit.Location = new Point(556, 364);
             bttnSubmit.Name = "bttnSubmit";
             bttnSubmit.Size = new Size(75, 23);
             bttnSubmit.TabIndex = 1;
@@ -49,15 +52,37 @@
             bttnSubmit.UseVisualStyleBackColor = true;
             bttnSubmit.Click += bttnSubmit_Click;
             // 
+            // cmbxProvince
+            // 
+            cmbxProvince.FormattingEnabled = true;
+            cmbxProvince.Items.AddRange(new object[] { "Alberta", "British Columbia", "Saskatchewan", "North West Territories", "Ontario", "Nova Scotia" });
+            cmbxProvince.Location = new Point(178, 364);
+            cmbxProvince.Name = "cmbxProvince";
+            cmbxProvince.Size = new Size(164, 23);
+            cmbxProvince.TabIndex = 2;
+            cmbxProvince.SelectedIndexChanged += cmbxProvince_SelectedIndexChanged;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.canada_map;
+            pictureBox1.Location = new Point(241, 58);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(289, 254);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
+            Controls.Add(cmbxProvince);
             Controls.Add(bttnSubmit);
             Controls.Add(txtbxIncome);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -66,5 +91,7 @@
 
         private TextBox txtbxIncome;
         private Button bttnSubmit;
+        private ComboBox cmbxProvince;
+        private PictureBox pictureBox1;
     }
 }
