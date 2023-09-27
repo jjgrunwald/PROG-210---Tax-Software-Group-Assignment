@@ -1,9 +1,8 @@
-﻿using System.ComponentModel.Design;
+using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 
 namespace TaxClassLibrary
 {
-   
     public class ProvTax
     {
 
@@ -93,7 +92,6 @@ namespace TaxClassLibrary
             if (income >= abIncome[0])
             {
                 tax = abTax[0] * abIncome[0];
-;
 
             }
             
