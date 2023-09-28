@@ -39,27 +39,40 @@ namespace PROG_210_Group_Assignment
             decimal abTax = provTax.abTax(income);
         }
 
+        private void Enable_Inputs()
+        {
+            txtbxIncome.Enabled = true;
+            bttnSubmit.Enabled = true;
+            txtbxIncome.Text = "";
+        }
+
         private void cmbxProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cmbxProvince.SelectedIndex)
             {
                 case 0:
                     picbxCanada.Image = ab;
+                    Enable_Inputs();
                     break;
                 case 1:
                     picbxCanada.Image = bc;
+                    Enable_Inputs();
                     break;
                 case 2:
                     picbxCanada.Image = sk;
+                    Enable_Inputs();
                     break;
                 case 3:
                     picbxCanada.Image = nb;
+                    Enable_Inputs();
                     break;
                 case 4:
                     picbxCanada.Image = on;
+                    Enable_Inputs();
                     break;
                 case 5:
                     picbxCanada.Image = ns;
+                    Enable_Inputs();
                     break;
 
             }

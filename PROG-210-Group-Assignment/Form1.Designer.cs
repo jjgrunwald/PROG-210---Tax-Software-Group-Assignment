@@ -35,28 +35,33 @@
             picbxCanada = new PictureBox();
             picbxLogo = new PictureBox();
             lblTitle = new Label();
-            lblProvince = new Label();
             lblIncome = new Label();
             lblSubTitle = new Label();
             lblEditionTitle = new Label();
             lblDollar = new Label();
             lblTaxesDue = new Label();
+            lblProvince = new Label();
             ((System.ComponentModel.ISupportInitialize)picbxCanada).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picbxLogo).BeginInit();
             SuspendLayout();
             // 
             // txtbxIncome
             // 
+            txtbxIncome.Enabled = false;
+            txtbxIncome.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtbxIncome.Location = new Point(403, 581);
             txtbxIncome.Name = "txtbxIncome";
-            txtbxIncome.Size = new Size(202, 23);
+            txtbxIncome.Size = new Size(202, 26);
             txtbxIncome.TabIndex = 0;
+            txtbxIncome.Text = "Select Province";
             // 
             // bttnSubmit
             // 
+            bttnSubmit.Enabled = false;
+            bttnSubmit.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             bttnSubmit.Location = new Point(611, 581);
             bttnSubmit.Name = "bttnSubmit";
-            bttnSubmit.Size = new Size(75, 23);
+            bttnSubmit.Size = new Size(75, 26);
             bttnSubmit.TabIndex = 1;
             bttnSubmit.Text = "Submit";
             bttnSubmit.UseVisualStyleBackColor = true;
@@ -75,7 +80,7 @@
             // picbxCanada
             // 
             picbxCanada.Image = Properties.Resources.canada_map;
-            picbxCanada.Location = new Point(215, 181);
+            picbxCanada.Location = new Point(220, 183);
             picbxCanada.Name = "picbxCanada";
             picbxCanada.Size = new Size(385, 317);
             picbxCanada.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -101,16 +106,6 @@
             lblTitle.Size = new Size(337, 86);
             lblTitle.TabIndex = 5;
             lblTitle.Text = "Taxes, Eh?";
-            // 
-            // lblProvince
-            // 
-            lblProvince.AutoSize = true;
-            lblProvince.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblProvince.Location = new Point(162, 563);
-            lblProvince.Name = "lblProvince";
-            lblProvince.Size = new Size(117, 15);
-            lblProvince.TabIndex = 6;
-            lblProvince.Text = "Select your province:";
             // 
             // lblIncome
             // 
@@ -146,7 +141,7 @@
             // 
             lblDollar.AutoSize = true;
             lblDollar.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDollar.Location = new Point(369, 572);
+            lblDollar.Location = new Point(378, 572);
             lblDollar.Name = "lblDollar";
             lblDollar.Size = new Size(28, 32);
             lblDollar.TabIndex = 10;
@@ -161,13 +156,22 @@
             lblTaxesDue.Size = new Size(0, 32);
             lblTaxesDue.TabIndex = 11;
             // 
+            // lblProvince
+            // 
+            lblProvince.AutoSize = true;
+            lblProvince.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblProvince.Location = new Point(162, 563);
+            lblProvince.Name = "lblProvince";
+            lblProvince.Size = new Size(117, 15);
+            lblProvince.TabIndex = 6;
+            lblProvince.Text = "Select your province:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(833, 671);
+            ClientSize = new Size(846, 671);
             Controls.Add(lblTaxesDue);
-            Controls.Add(lblDollar);
             Controls.Add(lblEditionTitle);
             Controls.Add(lblIncome);
             Controls.Add(lblProvince);
@@ -178,6 +182,7 @@
             Controls.Add(bttnSubmit);
             Controls.Add(txtbxIncome);
             Controls.Add(lblSubTitle);
+            Controls.Add(lblDollar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Taxes, Eh? - 2023 Edition";
@@ -195,11 +200,11 @@
         private PictureBox picbxCanada;
         private PictureBox picbxLogo;
         private Label lblTitle;
-        private Label lblProvince;
         private Label lblIncome;
         private Label lblSubTitle;
         private Label lblEditionTitle;
         private Label lblDollar;
         private Label lblTaxesDue;
+        private Label lblProvince;
     }
 }
