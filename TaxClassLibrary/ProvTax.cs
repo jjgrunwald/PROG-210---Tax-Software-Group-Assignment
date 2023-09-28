@@ -8,7 +8,7 @@ namespace TaxClassLibrary
 
         //Alberta Tax
 
-        public void abTax(decimal income)
+        public decimal abTax(decimal income)
         {
                                 /*            Tax rate    Taxable income threshold
                                 10 % on the portion of taxable income that is $142,292 or less, plus
@@ -21,9 +21,13 @@ namespace TaxClassLibrary
             decimal[] incomeBracket = { 142292m, 170751m, 227668m, 341502m };
 
             TaxCalculator(income, provincialTax, incomeBracket);
+
+
+            return income;
+            
         }
 
-        public void bcTax(decimal income)
+        public decimal bcTax(decimal income)
         {
                         /*            Tax rate    Taxable income threshold
                         5.06 % on the portion of taxable income that is $45,654 or less, plus
@@ -39,9 +43,11 @@ namespace TaxClassLibrary
 
             TaxCalculator(income, provincialTax, incomeBracket);
 
+            return income;
+
         }
 
-        public void skTax(decimal income)
+        public decimal skTax(decimal income)
         {
 /*                                    Tax rate    Taxable income threshold
                         10.5 % on the portion of taxable income that is $49,720 or less, plus
@@ -52,9 +58,12 @@ namespace TaxClassLibrary
             decimal[] incomeBracket = { 49720m, 142058 };
 
             TaxCalculator(income, provincialTax, incomeBracket);
+
+            return income;
+
         }
 
-        public void nwtTax(decimal income)
+        public decimal nwtTax(decimal income)
         {
                             /*            Tax rate Taxable income threshold
                             5.9 % on the portion of taxable income that is $48,326 or less, plus
@@ -67,9 +76,11 @@ namespace TaxClassLibrary
             decimal[] incomeBracket = { 48326m, 96655m, 157139m, 157139m};
 
             TaxCalculator(income, provincialTax, incomeBracket);
+
+            return income;
         }
 
-        public void onTax(decimal income)
+        public decimal onTax(decimal income)
         {
                                 /*            Tax rate    Taxable income threshold
                                 5.05 % on the portion of taxable income that is $49,231 or less, plus
@@ -83,9 +94,11 @@ namespace TaxClassLibrary
             decimal[] incomeBracket = { 49231, 98463, 150000, 220000};
 
             TaxCalculator(income, provincialTax, incomeBracket);
+
+            return income;
         }
 
-        public void nsTax(decimal income)
+        public decimal nsTax(decimal income)
         {
                                 /*            Tax rate Taxable income threshold
                                 8.79 % on the portion of taxable income that is $29,590 or less, plus
@@ -99,6 +112,8 @@ namespace TaxClassLibrary
             decimal[] incomeBracket = { 29590, 59180, 93000, 150000 };
 
             TaxCalculator(income, provincialTax, incomeBracket);
+
+            return income;
         }
 
             //Tax Calculator Method
@@ -128,7 +143,7 @@ namespace TaxClassLibrary
                 {
                     totalUntaxed -= totalTaxed;
                     tax += totalUntaxed * provincialTax[i] + 1;
-                    return tax;
+                    return income = tax;
                 }
                 if (income > incomeBracket[i] + 1)
                 {
@@ -144,10 +159,10 @@ namespace TaxClassLibrary
             {
                 tax += totalUntaxed * finalTax;
                 totalTaxed += tax;
-                return tax;
+                return income = tax;
             }
             else
-         return tax;
+         return income = tax;
 
         }
 
