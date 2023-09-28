@@ -12,7 +12,6 @@ namespace PROG_210_Assignment_Test
             FedTax tax = new FedTax();
             decimal result = tax.federaltaxcalc(2500);
             Assert.AreEqual(375, result);
-
         }
 
         [TestMethod]
@@ -33,6 +32,37 @@ namespace PROG_210_Assignment_Test
 
         }
 
+        //Everything below this are the test Josh has made, most if not all of them pass error when tested, however
+        //--------------------
+        //FedTax
+
+        [TestMethod]
+        public void CalcFedax_260000()
+        {
+            decimal input = 260000;
+            FedTax tax = new FedTax();
+            decimal B1 = 53359 * .15m;
+            decimal B2 = (106717 - 53359) * .205m;
+            decimal B3 = (165430 - 106717) * .26m;
+            decimal B4 = (input - 165430) * .29m;
+            decimal result = tax.federaltaxcalc(260000);
+            Assert.AreEqual(61632.92m, result);
+        }
+
+        public void CalcFedax_500000()
+        {
+            decimal input = 500000;
+            FedTax tax = new FedTax();
+            decimal B1 = 53359 * .15m;
+            decimal B2 = (106717 - 53359) * .205m;
+            decimal B3 = (165430 - 106717) * .26m;
+            decimal B4 = (235675 - 165430) * .29m;
+            decimal B5 = (input - 227668) * .33m;
+            decimal result = tax.federaltaxcalc(500000);
+            Assert.AreEqual(144448.23m, result);
+        }
+        //------------------
+        //Alberta Tax
         [TestMethod]
         public void CalcABTax_260000()
         {
@@ -61,7 +91,7 @@ namespace PROG_210_Assignment_Test
             Assert.AreEqual(64754.95m, result);
         }
         //-------------------------------------
-
+        //British Columbia Tax
         [TestMethod]
         public void CalcBCTax_260000()
         {
@@ -95,16 +125,16 @@ namespace PROG_210_Assignment_Test
         }
 
         //------------------------
-
+        //Saskatchewan tax
         [TestMethod]
         public void CalcSKTax_160000()
         {
             decimal input = 160000;
             ProvTax tax = new ProvTax();
-            decimal b1 = 49720 * .0105m;
+            decimal b1 = 49720 * .105m;
             decimal b2 = (input - 49720) * .125m;
             decimal result = tax.skTax(160000);
-            Assert.AreEqual(14307.06m, result);
+            Assert.AreEqual(19005.6m, result);
         }
 
 
@@ -113,25 +143,25 @@ namespace PROG_210_Assignment_Test
         {
             decimal input = 500000;
             ProvTax tax = new ProvTax();
-            decimal b1 = 49720 * .0105m;
+            decimal b1 = 49720 * .105m;
             decimal b2 = (142058 - 49720) * .125m;
             decimal b3 = (input - 142058) * .145m;
             decimal result = tax.skTax(500000);
-            Assert.AreEqual(63965.9m, result);
+            Assert.AreEqual(68664.44m, result);
         }
 
         //----------------
-
+        //Northwest Territories tax
         [TestMethod]
         public void CalcNWTTax_160000()
         {
             decimal input = 160000;
             ProvTax tax = new ProvTax();
             decimal b1 = 48326 * .059m;
-            decimal b2 = (96655 - 49720) * .086m;
+            decimal b2 = (96655 - 48326) * .086m;
             decimal b3 = (input - 96655) * .122m;
             decimal result = tax.nwtTax(60000);
-            Assert.AreEqual(14615.734m, result);
+            Assert.AreEqual(14735.618m, result);
         }
 
 
@@ -140,51 +170,74 @@ namespace PROG_210_Assignment_Test
         {
             decimal input = 500000;
             ProvTax tax = new ProvTax();
-            decimal b1 = 49720 * .0105m;
-            decimal b2 = (142058 - 49720) * .125m;
-            decimal b3 = (500000 - 142058) * .145m;
-            decimal b4 = (input - 142058) * .145m;
+            decimal b1 = 48326 * .059m;
+            decimal b2 = (96655 - 48326) * .086m;
+            decimal b3 = (157139 - 96655) * .122m;
+            decimal b4 = (input - 157139) * .1405m;
             decimal result = tax.nwtTax(500000);
-            Assert.AreEqual(63965.9m, result);
+            Assert.AreEqual(62558.5465m, result);
+        }
+
+        //-------------------
+        //Ontario tax
+        [TestMethod]
+        public void CalcONTax_260000()
+        {
+            decimal input = 260000;
+            ProvTax tax = new ProvTax();
+            decimal b1 = 49231 * .0505m;
+            decimal b2 = (98463 - 49231) * .0915m;
+            decimal b3 = (150000 - 98463) * .1116m;
+            decimal b4 = (input - 150000) * .1216m;
+            decimal result = tax.onTax(260000);
+            Assert.AreEqual(26118.4227m, result);
         }
 
         [TestMethod]
-        public void CalcBCTax_56000()
+        public void CalcONTax_500000()
         {
+            decimal input = 500000;
             ProvTax tax = new ProvTax();
-            decimal result = tax.bcTax(56000);
-            Assert.AreEqual(56000m * .10m, result);
-        }
-        [TestMethod]
-        public void CalcSKTax_56000()
-        {
-            ProvTax tax = new ProvTax();
-            decimal result = tax.skTax(56000);
-            Assert.AreEqual(56000m * .105m, result);
-        }
-        [TestMethod]
-        public void CalcNWTTax_56000()
-        {
-            ProvTax tax = new ProvTax();
-            decimal result = tax.nwtTax(56000);
-            Assert.AreEqual(56000m * .10m, result);
-        }
-        [TestMethod]
-        public void CalcONTax_56000()
-        {
-            ProvTax tax = new ProvTax();
-            decimal result = tax.onTax(56000);
-            Assert.AreEqual(56000m * .10m, result);
-        }
-        [TestMethod]
-        public void CalcNSTax_56000()
-        {
-            ProvTax tax = new ProvTax();
-            decimal result = tax.nsTax(56000);
-            Assert.AreEqual(56000m * .10m, result);
+            decimal b1 = 49231 * .0505m;
+            decimal b2 = (98463 - 49231) * .0915m;
+            decimal b3 = (150000 - 98463) * .1116m;
+            decimal b4 = (220000 - 150000) * .1216m;
+            decimal b5 = (input - 220000) * .1316m;
+            decimal result = tax.onTax(500000);
+            Assert.AreEqual(58102.4227m, result);
         }
 
+        //--------------------
+        //Nova scotia tax
 
+        [TestMethod]
+        public void CalcNSTax_260000()
+        {
+            decimal input = 260000;
+            ProvTax tax = new ProvTax();
+            decimal b1 = 29590 * .0879m;
+            decimal b2 = (59180 - 29590) * .1495m;
+            decimal b3 = (93000 - 59180) * .1667m;
+            decimal b4 = (input - 93000) * .175m;
+            decimal result = tax.nsTax(260000);
+            Assert.AreEqual(41887.46m * .10m, result);
+        }
+
+        [TestMethod]
+        public void CalcNSTax_500000()
+        {
+            decimal input = 500000;
+            ProvTax tax = new ProvTax();
+            decimal b1 = 29590 * .0879m;
+            decimal b2 = (59180 - 29590) * .1495m;
+            decimal b3 = (93000 - 59180) * .1667m;
+            decimal b4 = (150000 - 93000) * .175m;
+            decimal b5 = (input - 150000) * .21m;
+            decimal result = tax.nsTax(500000);
+            Assert.AreEqual(96137.46m * .10m, result);
+        }
+
+        //--------------
         //internal class ProvTax
         //{
         //    public string province;
