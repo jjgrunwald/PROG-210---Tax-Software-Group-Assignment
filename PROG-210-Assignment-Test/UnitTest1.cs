@@ -94,6 +94,59 @@ namespace PROG_210_Assignment_Test
             Assert.AreEqual(81348.5m, result);
         }
 
+        //------------------------
+
+        [TestMethod]
+        public void CalcSKTax_160000()
+        {
+            decimal input = 160000;
+            ProvTax tax = new ProvTax();
+            decimal b1 = 49720 * .0105m;
+            decimal b2 = (input - 49720) * .125m;
+            decimal result = tax.skTax(160000);
+            Assert.AreEqual(14307.06m, result);
+        }
+
+
+        [TestMethod]
+        public void CalcSKTax_500000()
+        {
+            decimal input = 500000;
+            ProvTax tax = new ProvTax();
+            decimal b1 = 49720 * .0105m;
+            decimal b2 = (142058 - 49720) * .125m;
+            decimal b3 = (input - 142058) * .145m;
+            decimal result = tax.skTax(500000);
+            Assert.AreEqual(63965.9m, result);
+        }
+
+        //----------------
+
+        [TestMethod]
+        public void CalcNWTTax_160000()
+        {
+            decimal input = 160000;
+            ProvTax tax = new ProvTax();
+            decimal b1 = 48326 * .059m;
+            decimal b2 = (96655 - 49720) * .086m;
+            decimal b3 = (input - 96655) * .122m;
+            decimal result = tax.nwtTax(60000);
+            Assert.AreEqual(14615.734m, result);
+        }
+
+
+        [TestMethod]
+        public void CalcNWTTax_500000()
+        {
+            decimal input = 500000;
+            ProvTax tax = new ProvTax();
+            decimal b1 = 49720 * .0105m;
+            decimal b2 = (142058 - 49720) * .125m;
+            decimal b3 = (500000 - 142058) * .145m;
+            decimal b4 = (input - 142058) * .145m;
+            decimal result = tax.nwtTax(500000);
+            Assert.AreEqual(63965.9m, result);
+        }
 
         [TestMethod]
         public void CalcBCTax_56000()
