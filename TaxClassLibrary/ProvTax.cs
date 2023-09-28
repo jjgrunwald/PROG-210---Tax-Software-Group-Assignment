@@ -48,8 +48,8 @@ namespace TaxClassLibrary
                         12.5 % on the portion of taxable income over $49,720 up to $142,058, plus
                         14.5 % on the portion of taxable income over $142,058*/
 
-            decimal[] provincialTax = { 0.0506m, 0.0707m, 0.1005m, 0.1229m, 0.147m, 0.168m, 0.205m };
-            decimal[] incomeBracket = { 45654m, 91310m, 104835m, 127299m, 172602m, 240716m };
+            decimal[] provincialTax = { 0.105m, 0.125m, 0.145m  };
+            decimal[] incomeBracket = { 49720m, 142058 };
 
             TaxCalculator(income, provincialTax, incomeBracket);
         }
@@ -61,16 +61,28 @@ namespace TaxClassLibrary
                             8.6 % on the portion of taxable income over $48,326 up to $96,655, plus
                             12.2 % on the portion of taxable income over $96,655 up to $157,139, plus
                             14.05 % on the portion of taxable income over $157,139*/
+
+
+            decimal[] provincialTax = { 0.59m, 0.86m, 0.122m, 0.1405m };
+            decimal[] incomeBracket = { 48326m, 96655m, 157139m, 157139m};
+
+            TaxCalculator(income, provincialTax, incomeBracket);
         }
 
         public void onTax(decimal income)
         {
-                            /*            Tax rate    Taxable income threshold
-                            5.05 % on the portion of taxable income that is $49,231 or less, plus
-                            9.15 % on the portion of taxable income over $49,231 up to $98,463, plus
-                            11.16 % on the portion of taxable income over $98,463 up to $150,000, plus
-                            12.16 % on the portion of taxable income over $150,000 up to $220,000, plus
-                            13.16 % on the portion of taxable income over $220,000*/
+                                /*            Tax rate    Taxable income threshold
+                                5.05 % on the portion of taxable income that is $49,231 or less, plus
+                                9.15 % on the portion of taxable income over $49,231 up to $98,463, plus
+                                11.16 % on the portion of taxable income over $98,463 up to $150,000, plus
+                                12.16 % on the portion of taxable income over $150,000 up to $220,000, plus
+                                13.16 % on the portion of taxable income over $220,000*/
+
+
+            decimal[] provincialTax = { 0.505m, 0.915m, 0.1116m, 0.1216m, 0.1316m };
+            decimal[] incomeBracket = { 49231, 98463, 150000, 220000};
+
+            TaxCalculator(income, provincialTax, incomeBracket);
         }
 
         public void nsTax(decimal income)
@@ -81,6 +93,12 @@ namespace TaxClassLibrary
                                 16.67 % on the portion of taxable income over $59,180 up to $93,000, plus
                                 17.5 % on the portion of taxable income over $93,000 up to $150,000, plus
                                 21 % on the portion of taxable income over $150,000*/
+
+
+            decimal[] provincialTax = { 0.879m, 0.1495m, 0.1667m, 0.175m, 0.21m };
+            decimal[] incomeBracket = { 29590, 59180, 93000, 150000 };
+
+            TaxCalculator(income, provincialTax, incomeBracket);
         }
 
             //Tax Calculator Method
