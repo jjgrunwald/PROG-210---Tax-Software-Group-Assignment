@@ -16,7 +16,7 @@ namespace PROG_210_Group_Assignment
             InitializeComponent();
         }
 
-        public decimal income = 0;
+        public decimal income;
 
         string[] provinceList = { "Alberta",  "British Columbia", "Saskatchewan",
                                     "North West Territories", "Ontario", "Nova Scotia"};
@@ -32,9 +32,9 @@ namespace PROG_210_Group_Assignment
         {
             //Figure out which province is selected, and call the proper method.
 
-            income = decimal.Parse(bttnSubmit.Text);
-            FedTax tax = new FedTax();
-            decimal fedTax = tax.fedTax(income);
+            income = decimal.Parse(txtbxIncome.Text.ToString());
+/*            FedTax tax = new FedTax();*/
+/*            decimal fedTax = tax.fedTax(income);*/
             ProvTax provTax = new ProvTax();
             decimal abTax = provTax.abTax(income);
         }

@@ -69,6 +69,8 @@ namespace TaxClassLibrary
                 totalTaxed += tax;
             }
 
+
+
             //15% on the portion of taxable income over $341,502
             if (income >= abIncome[3] && income <= abIncome[4])
             {
