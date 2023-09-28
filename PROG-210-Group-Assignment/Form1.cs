@@ -21,12 +21,12 @@ namespace PROG_210_Group_Assignment
         string[] provinceList = { "Alberta",  "British Columbia", "Saskatchewan",
                                     "North West Territories", "Ontario", "Nova Scotia"};
 
-        Image ab = new Bitmap("../../images/ab.png");
-        Image bc = new Bitmap("../../images/bc.png");
-        Image nb = new Bitmap("../../images/nb.png");
-        Image ns = new Bitmap("../../images/ns.png");
-        Image on = new Bitmap("../../images/on.png");
-        Image sk = new Bitmap("../../images/sk.png");
+        Image ab = new Bitmap("../../../images/ab.png");
+        Image bc = new Bitmap("../../../images/bc.png");
+        Image nb = new Bitmap("../../../images/nb.png");
+        Image ns = new Bitmap("../../../images/ns.png");
+        Image on = new Bitmap("../../../images/on.png");
+        Image sk = new Bitmap("../../../images/sk.png");
 
         private void bttnSubmit_Click(object sender, EventArgs e)
         {
