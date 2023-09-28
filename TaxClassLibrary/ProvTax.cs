@@ -38,18 +38,26 @@ namespace TaxClassLibrary
                 {
                     totalUntaxed -= totalTaxed;
                     tax += totalUntaxed * provincialTax[i] + 1;
-                    return income = tax;
+                    return tax;
                 }
                 if (income > incomeBracket[i] + 1)
                 {
                     tax += provincialTax[i] + 1 * incomeBracket[i] + 1;
                     totalTaxed += tax;
                 }
-
             }
 
-    
-            return income + tax;
+            decimal finalBracket = incomeBracket.AsQueryable().Last();
+            decimal finalTax = provincialTax.AsQueryable().Last();
+
+            if (income > finalBracket)
+            {
+                tax += totalUntaxed * finalTax;
+                totalTaxed += tax;
+                return tax;
+            }
+            else
+            return tax;
 
 
             //attempting to refactor all of this code below, into the loop above.
