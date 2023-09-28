@@ -61,12 +61,12 @@ namespace PROG_210_Group_Assignment.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] ab {
+        internal static System.Drawing.Bitmap ab {
             get {
                 object obj = ResourceManager.GetObject("ab", resourceCulture);
-                return ((byte[])(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

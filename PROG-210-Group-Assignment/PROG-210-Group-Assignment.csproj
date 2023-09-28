@@ -10,10 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="bin\images\ab.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="bin\images\sk.png" />
   </ItemGroup>
 
@@ -35,6 +31,10 @@
 
   <ItemGroup>
     <None Include="bin\images\bc.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\images\ab.png" />
   </ItemGroup>
 
   <ItemGroup>
