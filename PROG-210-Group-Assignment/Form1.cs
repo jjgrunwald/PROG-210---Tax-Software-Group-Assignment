@@ -54,7 +54,7 @@ namespace PROG_210_Group_Assignment
                     break;
                 case 3:
                     picbxCanada.Image = nb;
-                break;
+                    break;
                 case 4:
                     picbxCanada.Image = on;
                     break;
@@ -63,4 +63,6 @@ namespace PROG_210_Group_Assignment
                     break;
 
             }
-        } } }
+        }
+    }
+}
