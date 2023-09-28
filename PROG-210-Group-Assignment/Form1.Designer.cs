@@ -39,20 +39,22 @@
             lblIncome = new Label();
             lblSubTitle = new Label();
             lblEditionTitle = new Label();
+            lblDollar = new Label();
+            lblTaxesDue = new Label();
             ((System.ComponentModel.ISupportInitialize)picbxCanada).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picbxLogo).BeginInit();
             SuspendLayout();
             // 
             // txtbxIncome
             // 
-            txtbxIncome.Location = new Point(353, 560);
+            txtbxIncome.Location = new Point(403, 581);
             txtbxIncome.Name = "txtbxIncome";
             txtbxIncome.Size = new Size(202, 23);
             txtbxIncome.TabIndex = 0;
             // 
             // bttnSubmit
             // 
-            bttnSubmit.Location = new Point(561, 560);
+            bttnSubmit.Location = new Point(611, 581);
             bttnSubmit.Name = "bttnSubmit";
             bttnSubmit.Size = new Size(75, 23);
             bttnSubmit.TabIndex = 1;
@@ -62,9 +64,9 @@
             // 
             // cmbxProvince
             // 
-            cmbxProvince.FormattingEnabled = true;
+            cmbxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbxProvince.Items.AddRange(new object[] { "Alberta", "British Columbia", "Saskatchewan", "North West Territories", "Ontario", "Nova Scotia" });
-            cmbxProvince.Location = new Point(183, 560);
+            cmbxProvince.Location = new Point(162, 581);
             cmbxProvince.Name = "cmbxProvince";
             cmbxProvince.Size = new Size(164, 23);
             cmbxProvince.TabIndex = 2;
@@ -83,7 +85,7 @@
             // picbxLogo
             // 
             picbxLogo.Image = Properties.Resources.tax_logo;
-            picbxLogo.Location = new Point(172, 26);
+            picbxLogo.Location = new Point(184, 26);
             picbxLogo.Name = "picbxLogo";
             picbxLogo.Size = new Size(120, 120);
             picbxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -94,7 +96,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitle.Location = new Point(303, 26);
+            lblTitle.Location = new Point(315, 26);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(337, 86);
             lblTitle.TabIndex = 5;
@@ -104,7 +106,7 @@
             // 
             lblProvince.AutoSize = true;
             lblProvince.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblProvince.Location = new Point(183, 542);
+            lblProvince.Location = new Point(162, 563);
             lblProvince.Name = "lblProvince";
             lblProvince.Size = new Size(117, 15);
             lblProvince.TabIndex = 6;
@@ -114,7 +116,7 @@
             // 
             lblIncome.AutoSize = true;
             lblIncome.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblIncome.Location = new Point(353, 542);
+            lblIncome.Location = new Point(403, 563);
             lblIncome.Name = "lblIncome";
             lblIncome.Size = new Size(134, 15);
             lblIncome.TabIndex = 7;
@@ -124,7 +126,7 @@
             // 
             lblSubTitle.AutoSize = true;
             lblSubTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lblSubTitle.Location = new Point(327, 104);
+            lblSubTitle.Location = new Point(339, 104);
             lblSubTitle.Name = "lblSubTitle";
             lblSubTitle.Size = new Size(273, 32);
             lblSubTitle.TabIndex = 8;
@@ -134,17 +136,38 @@
             // 
             lblEditionTitle.AutoSize = true;
             lblEditionTitle.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblEditionTitle.Location = new Point(440, 136);
+            lblEditionTitle.Location = new Point(452, 136);
             lblEditionTitle.Name = "lblEditionTitle";
             lblEditionTitle.Size = new Size(160, 20);
             lblEditionTitle.TabIndex = 9;
             lblEditionTitle.Text = "2023 Tax Year Edition";
+            // 
+            // lblDollar
+            // 
+            lblDollar.AutoSize = true;
+            lblDollar.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDollar.Location = new Point(369, 572);
+            lblDollar.Name = "lblDollar";
+            lblDollar.Size = new Size(28, 32);
+            lblDollar.TabIndex = 10;
+            lblDollar.Text = "$";
+            // 
+            // lblTaxesDue
+            // 
+            lblTaxesDue.AutoSize = true;
+            lblTaxesDue.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTaxesDue.Location = new Point(454, 516);
+            lblTaxesDue.Name = "lblTaxesDue";
+            lblTaxesDue.Size = new Size(0, 32);
+            lblTaxesDue.TabIndex = 11;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(833, 671);
+            Controls.Add(lblTaxesDue);
+            Controls.Add(lblDollar);
             Controls.Add(lblEditionTitle);
             Controls.Add(lblIncome);
             Controls.Add(lblProvince);
@@ -176,5 +199,7 @@
         private Label lblIncome;
         private Label lblSubTitle;
         private Label lblEditionTitle;
+        private Label lblDollar;
+        private Label lblTaxesDue;
     }
 }
