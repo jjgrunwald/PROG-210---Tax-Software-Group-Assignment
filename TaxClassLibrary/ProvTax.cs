@@ -39,7 +39,7 @@ namespace TaxClassLibrary
             decimal[] provincialTax = { 0.00506m, 0.00707m, 0.01005m, 0.01229m, 0.0147m, 0.0168m, 0.0205m };
             decimal[] incomeBracket = { 45654m, 91310m, 104835m, 127299m, 172602m, 240716m };
 
-            TaxCalculator(income, provincialTax, incomeBracket);
+            income = TaxCalculator(income, provincialTax, incomeBracket);
 
             return income;
 
@@ -55,7 +55,7 @@ namespace TaxClassLibrary
             decimal[] provincialTax = { 0.0105m, 0.0125m, 0.0145m };
             decimal[] incomeBracket = { 49720m, 142058 };
 
-            TaxCalculator(income, provincialTax, incomeBracket);
+            income = TaxCalculator(income, provincialTax, incomeBracket);
 
             return income;
 
@@ -73,7 +73,7 @@ namespace TaxClassLibrary
             decimal[] provincialTax = { 0.059m, 0.086m, 0.0122m, 0.01405m };
             decimal[] incomeBracket = { 48326m, 96655m, 157139m, 157139m };
 
-            TaxCalculator(income, provincialTax, incomeBracket);
+            income = TaxCalculator(income, provincialTax, incomeBracket);
 
             return income;
         }
@@ -91,7 +91,7 @@ namespace TaxClassLibrary
             decimal[] provincialTax = { 0.0505m, 0.0915m, 0.01116m, 0.01216m, 0.01316m };
             decimal[] incomeBracket = { 49231, 98463, 150000, 220000 };
 
-            TaxCalculator(income, provincialTax, incomeBracket);
+            income = TaxCalculator(income, provincialTax, incomeBracket);
 
             return income;
         }
@@ -109,7 +109,7 @@ namespace TaxClassLibrary
             decimal[] provincialTax = { 0.0879m, 0.01495m, 0.01667m, 0.0175m, 0.021m };
             decimal[] incomeBracket = { 29590, 59180, 93000, 150000 };
 
-            TaxCalculator(income, provincialTax, incomeBracket);
+            income = TaxCalculator(income, provincialTax, incomeBracket);
 
             return income;
         }
