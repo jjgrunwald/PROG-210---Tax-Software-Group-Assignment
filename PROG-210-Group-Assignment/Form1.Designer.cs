@@ -39,11 +39,11 @@
             lblSubTitle = new Label();
             lblEditionTitle = new Label();
             lblDollar = new Label();
-            lblProvTaxDue = new Label();
-            lblProvince = new Label();
             lblProvTaxDue2 = new Label();
-            lblFedTaxDue2 = new Label();
+            lblProvince = new Label();
+            lblProvTaxDue = new Label();
             lblFedTaxDue = new Label();
+            lblFedTaxDue2 = new Label();
             lblAnnualIncome = new Label();
             lblAnnualIncome2 = new Label();
             lblTotalTaxDue = new Label();
@@ -155,14 +155,14 @@
             lblDollar.TabIndex = 10;
             lblDollar.Text = "$";
             // 
-            // lblProvTaxDue
+            // lblProvTaxDue2
             // 
-            lblProvTaxDue.AutoSize = true;
-            lblProvTaxDue.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblProvTaxDue.Location = new Point(406, 775);
-            lblProvTaxDue.Name = "lblProvTaxDue";
-            lblProvTaxDue.Size = new Size(0, 18);
-            lblProvTaxDue.TabIndex = 11;
+            lblProvTaxDue2.AutoSize = true;
+            lblProvTaxDue2.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblProvTaxDue2.Location = new Point(406, 775);
+            lblProvTaxDue2.Name = "lblProvTaxDue2";
+            lblProvTaxDue2.Size = new Size(0, 18);
+            lblProvTaxDue2.TabIndex = 11;
             // 
             // lblProvince
             // 
@@ -174,36 +174,36 @@
             lblProvince.TabIndex = 6;
             lblProvince.Text = "Select your province:";
             // 
-            // lblProvTaxDue2
+            // lblProvTaxDue
             // 
-            lblProvTaxDue2.AutoSize = true;
-            lblProvTaxDue2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblProvTaxDue2.ForeColor = SystemColors.AppWorkspace;
-            lblProvTaxDue2.Location = new Point(127, 771);
-            lblProvTaxDue2.Name = "lblProvTaxDue2";
-            lblProvTaxDue2.Size = new Size(156, 21);
-            lblProvTaxDue2.TabIndex = 12;
-            lblProvTaxDue2.Text = "Provincial Tax Due:";
-            // 
-            // lblFedTaxDue2
-            // 
-            lblFedTaxDue2.AutoSize = true;
-            lblFedTaxDue2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblFedTaxDue2.ForeColor = SystemColors.AppWorkspace;
-            lblFedTaxDue2.Location = new Point(127, 710);
-            lblFedTaxDue2.Name = "lblFedTaxDue2";
-            lblFedTaxDue2.Size = new Size(135, 21);
-            lblFedTaxDue2.TabIndex = 14;
-            lblFedTaxDue2.Text = "Federal Tax Due:";
+            lblProvTaxDue.AutoSize = true;
+            lblProvTaxDue.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblProvTaxDue.ForeColor = SystemColors.AppWorkspace;
+            lblProvTaxDue.Location = new Point(127, 771);
+            lblProvTaxDue.Name = "lblProvTaxDue";
+            lblProvTaxDue.Size = new Size(156, 21);
+            lblProvTaxDue.TabIndex = 12;
+            lblProvTaxDue.Text = "Provincial Tax Due:";
             // 
             // lblFedTaxDue
             // 
             lblFedTaxDue.AutoSize = true;
-            lblFedTaxDue.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblFedTaxDue.Location = new Point(406, 714);
+            lblFedTaxDue.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFedTaxDue.ForeColor = SystemColors.AppWorkspace;
+            lblFedTaxDue.Location = new Point(127, 710);
             lblFedTaxDue.Name = "lblFedTaxDue";
-            lblFedTaxDue.Size = new Size(0, 18);
-            lblFedTaxDue.TabIndex = 13;
+            lblFedTaxDue.Size = new Size(135, 21);
+            lblFedTaxDue.TabIndex = 14;
+            lblFedTaxDue.Text = "Federal Tax Due:";
+            // 
+            // lblFedTaxDue2
+            // 
+            lblFedTaxDue2.AutoSize = true;
+            lblFedTaxDue2.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFedTaxDue2.Location = new Point(406, 714);
+            lblFedTaxDue2.Name = "lblFedTaxDue2";
+            lblFedTaxDue2.Size = new Size(0, 18);
+            lblFedTaxDue2.TabIndex = 13;
             // 
             // lblAnnualIncome
             // 
@@ -266,10 +266,10 @@
             Controls.Add(lblAnnualIncome2);
             Controls.Add(lblTotalTaxDue);
             Controls.Add(lblTotalTaxDue2);
-            Controls.Add(lblFedTaxDue2);
             Controls.Add(lblFedTaxDue);
-            Controls.Add(lblProvTaxDue2);
+            Controls.Add(lblFedTaxDue2);
             Controls.Add(lblProvTaxDue);
+            Controls.Add(lblProvTaxDue2);
             Controls.Add(lblEditionTitle);
             Controls.Add(lblIncome);
             Controls.Add(lblProvince);
@@ -305,11 +305,11 @@
         private Label lblSubTitle;
         private Label lblEditionTitle;
         private Label lblDollar;
-        private Label lblProvTaxDue;
-        private Label lblProvince;
         private Label lblProvTaxDue2;
-        private Label lblFedTaxDue2;
+        private Label lblProvince;
+        private Label lblProvTaxDue;
         private Label lblFedTaxDue;
+        private Label lblFedTaxDue2;
         private Label lblAnnualIncome;
         private Label lblAnnualIncome2;
         private Label lblTotalTaxDue;

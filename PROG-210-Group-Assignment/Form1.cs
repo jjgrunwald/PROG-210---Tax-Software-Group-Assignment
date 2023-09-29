@@ -37,15 +37,15 @@ namespace PROG_210_Group_Assignment
         private void bttnSubmit_Click(object sender, EventArgs e)
         {
             bttnSubmit.Enabled = false;
-            lblProvTaxDue2.Visible = true;
-            lblFedTaxDue2.Visible = true;
+            lblProvTaxDue.Visible = true;
+            lblFedTaxDue.Visible = true;
             lblSummary.ForeColor = Color.Black;
             lblAnnualIncome.ForeColor = Color.Black;
             lblAnnualIncome2.ForeColor = Color.Black;
-            lblFedTaxDue.ForeColor = Color.Black;
             lblFedTaxDue2.ForeColor = Color.Black;
-            lblProvTaxDue.ForeColor = Color.Black;
+            lblFedTaxDue.ForeColor = Color.Black;
             lblProvTaxDue2.ForeColor = Color.Black;
+            lblProvTaxDue.ForeColor = Color.Black;
             lblTotalTaxDue.ForeColor = Color.Black;
             lblTotalTaxDue2.ForeColor = Color.Black;
 
@@ -57,7 +57,7 @@ namespace PROG_210_Group_Assignment
 
             fedTaxDue = tax.fedTax(incomeFed);
 
-            lblFedTaxDue.Text = "$ " + Decimal.Round(fedTaxDue, 2).ToString();
+            lblFedTaxDue2.Text = "$ " + Decimal.Round(fedTaxDue, 2).ToString();
 
             ProvTax provTax = new ProvTax();
 
@@ -103,7 +103,7 @@ namespace PROG_210_Group_Assignment
             lblProvTaxDue2.Text = "$ " + Decimal.Round(provTaxDue, 2).ToString();
             lblFedTaxDue2.Text = "$ " + Decimal.Round(fedTaxDue, 2).ToString();
             lblAnnualIncome2.Text = "$ " + Decimal.Round(income, 2).ToString();
-            decimal totalDue = fedTaxDue+ provTaxDue;
+            decimal totalDue = fedTaxDue + provTaxDue;
             lblTotalTaxDue2.Text = "$ " + Decimal.Round(totalDue, 2).ToString();
         }
 
