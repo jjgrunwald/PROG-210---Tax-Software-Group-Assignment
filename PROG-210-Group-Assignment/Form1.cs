@@ -35,7 +35,15 @@ namespace PROG_210_Group_Assignment
             bttnSubmit.Enabled = false;
             lblProvTaxDue2.Visible = true;
             lblFedTaxDue2.Visible = true;
-
+            lblSummary.ForeColor = Color.Black;
+            lblAnnualIncome.ForeColor = Color.Black;
+            lblAnnualIncome2.ForeColor = Color.Black;
+            lblFedTaxDue.ForeColor = Color.Black;
+            lblFedTaxDue2.ForeColor = Color.Black;
+            lblProvTaxDue.ForeColor = Color.Black;
+            lblProvTaxDue2.ForeColor = Color.Black;
+            lblTotalTaxDue.ForeColor = Color.Black;
+            lblTotalTaxDue2.ForeColor = Color.Black;
 
             income = decimal.Parse(txtbxIncome.Text.ToString());
 
