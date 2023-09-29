@@ -44,24 +44,24 @@ namespace PROG_210_Group_Assignment
             switch (province)
             {
                 case "ab":
-                    lblProvTaxDue.Text = provTax.abTax(income).ToString();
+                    lblProvTaxDue.Text = "$ "+Decimal.Round(provTax.abTax(income), 2).ToString();
                     break;
-/*                case "bc":
-                    provTaxSum = provTax.bcTax(income);
+                case "bc":
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.bcTax(income), 2).ToString();
                     break;
                 case "sk":
-                    provTaxSum = provTax.abTax(income);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.skTax(income), 2).ToString();
                     break;
-                case "nb":
-                    provTaxSum = provTax.abTax(income);
+                case "nwt":
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nwtTax(income), 2).ToString();
                     break;
                 case "on":
-                    provTaxSum = provTax.abTax(income);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.onTax(income), 2).ToString();
                     break;
                 case "ns":
-                    provTaxSum = provTax.abTax(income);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nsTax(income), 2).ToString();
                     break;
-               */
+
             }
         }
 

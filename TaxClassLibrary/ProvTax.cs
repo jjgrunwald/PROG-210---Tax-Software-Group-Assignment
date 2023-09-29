@@ -36,7 +36,7 @@ namespace TaxClassLibrary
             16.8 % on the portion of taxable income over $172,602 up to $240,716, plus
             20.5 % on the portion of taxable income over $240,716*/
 
-            decimal[] provincialTax = { 0.0506m, 0.0707m, 0.1005m, 0.1229m, 0.147m, 0.168m, 0.205m };
+            decimal[] provincialTax = { 0.00506m, 0.00707m, 0.01005m, 0.01229m, 0.0147m, 0.0168m, 0.0205m };
             decimal[] incomeBracket = { 45654m, 91310m, 104835m, 127299m, 172602m, 240716m };
 
             TaxCalculator(income, provincialTax, incomeBracket);
@@ -52,7 +52,7 @@ namespace TaxClassLibrary
                                     12.5 % on the portion of taxable income over $49,720 up to $142,058, plus
                                     14.5 % on the portion of taxable income over $142,058*/
 
-            decimal[] provincialTax = { 0.105m, 0.125m, 0.145m };
+            decimal[] provincialTax = { 0.0105m, 0.0125m, 0.0145m };
             decimal[] incomeBracket = { 49720m, 142058 };
 
             TaxCalculator(income, provincialTax, incomeBracket);
@@ -70,7 +70,7 @@ namespace TaxClassLibrary
             14.05 % on the portion of taxable income over $157,139*/
 
 
-            decimal[] provincialTax = { 0.59m, 0.86m, 0.122m, 0.1405m };
+            decimal[] provincialTax = { 0.059m, 0.086m, 0.0122m, 0.01405m };
             decimal[] incomeBracket = { 48326m, 96655m, 157139m, 157139m };
 
             TaxCalculator(income, provincialTax, incomeBracket);
@@ -88,7 +88,7 @@ namespace TaxClassLibrary
             13.16 % on the portion of taxable income over $220,000*/
 
 
-            decimal[] provincialTax = { 0.505m, 0.915m, 0.1116m, 0.1216m, 0.1316m };
+            decimal[] provincialTax = { 0.0505m, 0.0915m, 0.01116m, 0.01216m, 0.01316m };
             decimal[] incomeBracket = { 49231, 98463, 150000, 220000 };
 
             TaxCalculator(income, provincialTax, incomeBracket);
@@ -106,7 +106,7 @@ namespace TaxClassLibrary
             21 % on the portion of taxable income over $150,000*/
 
 
-            decimal[] provincialTax = { 0.879m, 0.1495m, 0.1667m, 0.175m, 0.21m };
+            decimal[] provincialTax = { 0.0879m, 0.01495m, 0.01667m, 0.0175m, 0.021m };
             decimal[] incomeBracket = { 29590, 59180, 93000, 150000 };
 
             TaxCalculator(income, provincialTax, incomeBracket);
@@ -145,7 +145,7 @@ namespace TaxClassLibrary
                 }
                 if (income > incomeBracket[i]+1)
                 {
-                    tax += provincialTax[i]+1 * incomeBracket[i]+1 ;
+                    tax += totalUntaxed * provincialTax[i]+1;
                     totalTaxed += tax;
                 }
             }
