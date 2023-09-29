@@ -32,34 +32,43 @@ namespace PROG_210_Group_Assignment
 
         private void bttnSubmit_Click(object sender, EventArgs e)
         {
-            //Figure out which province is selected, and call the proper method.
+            bttnSubmit.Enabled = false;
+            lblProvTaxDue2.Visible = true;
+            lblFedTaxDue2.Visible = true;
+
 
             income = decimal.Parse(txtbxIncome.Text.ToString());
-            /*            FedTax tax = new FedTax();*/
-            /*            decimal fedTax = tax.fedTax(income);*/
+
+            decimal incomeFed = income;
+            decimal incomeProv = income;
+
+            FedTax tax = new FedTax();
+
+            decimal fedTax = tax.fedTax(incomeFed);
+
+            lblFedTaxDue.Text = "$ " + Decimal.Round(fedTax, 2).ToString();
+
             ProvTax provTax = new ProvTax();
-
-
 
             switch (province)
             {
                 case "ab":
-                    lblProvTaxDue.Text = "$ "+Decimal.Round(provTax.abTax(income), 2).ToString();
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.abTax(incomeProv), 2).ToString();
                     break;
                 case "bc":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.bcTax(income), 2).ToString();
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.bcTax(incomeProv), 2).ToString();
                     break;
                 case "sk":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.skTax(income), 2).ToString();
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.skTax(incomeProv), 2).ToString();
                     break;
                 case "nwt":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nwtTax(income), 2).ToString();
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nwtTax(incomeProv), 2).ToString();
                     break;
                 case "on":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.onTax(income), 2).ToString();
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.onTax(incomeProv), 2).ToString();
                     break;
                 case "ns":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nsTax(income), 2).ToString();
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nsTax(incomeProv), 2).ToString();
                     break;
 
             }
