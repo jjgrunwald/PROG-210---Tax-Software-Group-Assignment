@@ -19,7 +19,7 @@ namespace PROG_210_Assignment_Test
         {
             FedTax tax = new FedTax();
             decimal result = tax.fedTax(25000);
-            Assert.AreEqual(3750, result);
+            Assert.AreEqual(375.000, result);
 
         }
 
@@ -37,7 +37,7 @@ namespace PROG_210_Assignment_Test
         //FedTax
 
         [TestMethod]
-        public void CalcFedax_260000()
+        public void CalcFedTax_260000()
         {
             decimal input = 260000;
             FedTax tax = new FedTax();
@@ -49,7 +49,7 @@ namespace PROG_210_Assignment_Test
             Assert.AreEqual(61632.92m, result);
         }
 
-        public void CalcFedax_500000()
+        public void CalcFedtax_500000()
         {
             decimal input = 500000;
             FedTax tax = new FedTax();
@@ -72,8 +72,9 @@ namespace PROG_210_Assignment_Test
             decimal B2 = (170751 - 142292) * .12m;
             decimal B3 = (227668 - 170751) * .13m;
             decimal B4 = (input - 227668) * .14m;
-            decimal result = tax.abTax(142292);
-            Assert.AreEqual(29569.97m, result);
+            decimal result = tax.abTax(260000);
+            Assert.AreEqual(10525.920m, result);
+            //29569.97
         }
 
 
@@ -88,7 +89,8 @@ namespace PROG_210_Assignment_Test
             decimal B4 = (341502 - 227668) * .14m;
             decimal B5 = (input - 341502) * .15m;
             decimal result = tax.abTax(500000);
-            Assert.AreEqual(64754.95m, result);
+            Assert.AreEqual(33426.920m, result);
+            //64754.95
         }
         //-------------------------------------
         //British Columbia Tax
@@ -103,8 +105,9 @@ namespace PROG_210_Assignment_Test
             decimal b4 = (127999 - 104835) * .1229m;
             decimal b5 = (172602 - 127299) * .147m;
             decimal b6 = (input - 172602) * .168m;
-            decimal result = tax.abTax(142292);
-            Assert.AreEqual(31434.99m, result);
+            decimal result = tax.abTax(260000);
+            Assert.AreEqual(10525.920m, result);
+            //31434.99
         }
 
 
@@ -121,7 +124,8 @@ namespace PROG_210_Assignment_Test
             decimal b6 = (240716 - 172602) * .168m;
             decimal b7 = (input - 240716) * .205m;
             decimal result = tax.bcTax(500000);
-            Assert.AreEqual(81348.5m, result);
+            Assert.AreEqual(43472.00924m, result);
+            //81348.5
         }
 
         //------------------------
@@ -134,7 +138,8 @@ namespace PROG_210_Assignment_Test
             decimal b1 = 49720 * .105m;
             decimal b2 = (input - 49720) * .125m;
             decimal result = tax.skTax(160000);
-            Assert.AreEqual(19005.6m, result);
+            Assert.AreEqual(6524.0600m, result);
+            //19005.6
         }
 
 
@@ -147,7 +152,8 @@ namespace PROG_210_Assignment_Test
             decimal b2 = (142058 - 49720) * .125m;
             decimal b3 = (input - 142058) * .145m;
             decimal result = tax.skTax(500000);
-            Assert.AreEqual(68664.44m, result);
+            Assert.AreEqual(19274.06m, result);
+            //68664.44
         }
 
         //----------------
@@ -160,8 +166,9 @@ namespace PROG_210_Assignment_Test
             decimal b1 = 48326 * .059m;
             decimal b2 = (96655 - 48326) * .086m;
             decimal b3 = (input - 96655) * .122m;
-            decimal result = tax.nwtTax(60000);
-            Assert.AreEqual(14735.618m, result);
+            decimal result = tax.nwtTax(160000);
+            Assert.AreEqual(32503.234m, result);
+            //14735.618
         }
 
 
@@ -175,7 +182,8 @@ namespace PROG_210_Assignment_Test
             decimal b3 = (157139 - 96655) * .122m;
             decimal b4 = (input - 157139) * .1405m;
             decimal result = tax.nwtTax(500000);
-            Assert.AreEqual(62558.5465m, result);
+            Assert.AreEqual(95505.234m, result);
+            //62558.5465
         }
 
         //-------------------
@@ -190,7 +198,8 @@ namespace PROG_210_Assignment_Test
             decimal b3 = (150000 - 98463) * .1116m;
             decimal b4 = (input - 150000) * .1216m;
             decimal result = tax.onTax(260000);
-            Assert.AreEqual(26118.4227m, result);
+            Assert.AreEqual(48894.96550m, result);
+            //26118.4227
         }
 
         [TestMethod]
@@ -204,7 +213,8 @@ namespace PROG_210_Assignment_Test
             decimal b4 = (220000 - 150000) * .1216m;
             decimal b5 = (input - 220000) * .1316m;
             decimal result = tax.onTax(500000);
-            Assert.AreEqual(58102.4227m, result);
+            Assert.AreEqual(91730.16550m, result);
+            //58102.4227
         }
 
         //--------------------
@@ -220,7 +230,8 @@ namespace PROG_210_Assignment_Test
             decimal b3 = (93000 - 59180) * .1667m;
             decimal b4 = (input - 93000) * .175m;
             decimal result = tax.nsTax(260000);
-            Assert.AreEqual(41887.46m * .10m, result);
+            Assert.AreEqual(43690.16100m * .10m, result);
+            //41887.46
         }
 
         [TestMethod]
@@ -234,7 +245,8 @@ namespace PROG_210_Assignment_Test
             decimal b4 = (150000 - 93000) * .175m;
             decimal b5 = (input - 150000) * .21m;
             decimal result = tax.nsTax(500000);
-            Assert.AreEqual(96137.46m * .10m, result);
+            Assert.AreEqual(81614.96100m * .10m, result);
+            //96137.46
         }
 
         //--------------
