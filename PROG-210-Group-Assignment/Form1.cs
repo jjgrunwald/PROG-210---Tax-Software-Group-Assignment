@@ -41,34 +41,41 @@ namespace PROG_210_Group_Assignment
 
             decimal incomeFed = income;
             decimal incomeProv = income;
-
             FedTax tax = new FedTax();
 
-            decimal fedTax = tax.fedTax(incomeFed);
+            decimal fedTaxDue = tax.fedTax(incomeFed);
 
-            lblFedTaxDue.Text = "$ " + Decimal.Round(fedTax, 2).ToString();
+            lblFedTaxDue.Text = "$ " + Decimal.Round(fedTaxDue, 2).ToString();
 
             ProvTax provTax = new ProvTax();
+
+            decimal provTaxDue;
 
             switch (province)
             {
                 case "ab":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.abTax(incomeProv), 2).ToString();
+                    provTaxDue = provTax.abTax(incomeProv);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.abTax(provTaxDue), 2).ToString();
                     break;
                 case "bc":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.bcTax(incomeProv), 2).ToString();
+                    provTaxDue = provTax.bcTax(incomeProv);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.bcTax(provTaxDue), 2).ToString();
                     break;
                 case "sk":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.skTax(incomeProv), 2).ToString();
+                    provTaxDue = provTax.skTax(incomeProv);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.skTax(provTaxDue), 2).ToString();
                     break;
                 case "nwt":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nwtTax(incomeProv), 2).ToString();
+                    provTaxDue = provTax.nwtTax(incomeProv);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nwtTax(provTaxDue), 2).ToString();
                     break;
                 case "on":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.onTax(incomeProv), 2).ToString();
+                    provTaxDue = provTax.onTax(incomeProv);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.onTax(provTaxDue), 2).ToString();
                     break;
                 case "ns":
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nsTax(incomeProv), 2).ToString();
+                    provTaxDue = provTax.nsTax(incomeProv);
+                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nsTax(provTaxDue), 2).ToString();
                     break;
 
             }

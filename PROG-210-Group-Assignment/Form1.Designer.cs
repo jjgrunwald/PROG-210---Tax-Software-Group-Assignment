@@ -153,10 +153,10 @@
             // lblProvTaxDue
             // 
             lblProvTaxDue.AutoSize = true;
-            lblProvTaxDue.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblProvTaxDue.Location = new Point(683, 516);
+            lblProvTaxDue.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblProvTaxDue.Location = new Point(476, 739);
             lblProvTaxDue.Name = "lblProvTaxDue";
-            lblProvTaxDue.Size = new Size(0, 32);
+            lblProvTaxDue.Size = new Size(0, 21);
             lblProvTaxDue.TabIndex = 11;
             // 
             // lblProvince
@@ -173,7 +173,7 @@
             // 
             lblProvTaxDue2.AutoSize = true;
             lblProvTaxDue2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblProvTaxDue2.Location = new Point(464, 516);
+            lblProvTaxDue2.Location = new Point(241, 739);
             lblProvTaxDue2.Name = "lblProvTaxDue2";
             lblProvTaxDue2.Size = new Size(156, 21);
             lblProvTaxDue2.TabIndex = 12;
@@ -184,7 +184,7 @@
             // 
             lblFedTaxDue2.AutoSize = true;
             lblFedTaxDue2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblFedTaxDue2.Location = new Point(170, 516);
+            lblFedTaxDue2.Location = new Point(241, 674);
             lblFedTaxDue2.Name = "lblFedTaxDue2";
             lblFedTaxDue2.Size = new Size(156, 21);
             lblFedTaxDue2.TabIndex = 14;
@@ -194,17 +194,17 @@
             // lblFedTaxDue
             // 
             lblFedTaxDue.AutoSize = true;
-            lblFedTaxDue.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFedTaxDue.Location = new Point(387, 516);
+            lblFedTaxDue.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFedTaxDue.Location = new Point(476, 674);
             lblFedTaxDue.Name = "lblFedTaxDue";
-            lblFedTaxDue.Size = new Size(0, 32);
+            lblFedTaxDue.Size = new Size(0, 21);
             lblFedTaxDue.TabIndex = 13;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(846, 671);
+            ClientSize = new Size(846, 895);
             Controls.Add(lblFedTaxDue2);
             Controls.Add(lblFedTaxDue);
             Controls.Add(lblProvTaxDue2);
