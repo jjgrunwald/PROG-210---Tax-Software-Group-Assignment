@@ -20,6 +20,10 @@ namespace PROG_210_Group_Assignment
 
         public string province;
 
+        public decimal provTaxDue;
+
+        public decimal fedTaxDue;
+
         string[] provinceList = { "Alberta",  "British Columbia", "Saskatchewan",
                                     "North West Territories", "Ontario", "Nova Scotia"};
 
@@ -51,42 +55,40 @@ namespace PROG_210_Group_Assignment
             decimal incomeProv = income;
             FedTax tax = new FedTax();
 
-            decimal fedTaxDue = tax.fedTax(incomeFed);
+            fedTaxDue = tax.fedTax(incomeFed);
 
             lblFedTaxDue.Text = "$ " + Decimal.Round(fedTaxDue, 2).ToString();
 
             ProvTax provTax = new ProvTax();
 
-            decimal provTaxDue;
-
             switch (province)
             {
                 case "ab":
                     provTaxDue = provTax.abTax(incomeProv);
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.abTax(provTaxDue), 2).ToString();
+                    Display_Information(fedTaxDue, provTaxDue, income);
                     break;
                 case "bc":
                     provTaxDue = provTax.bcTax(incomeProv);
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.bcTax(provTaxDue), 2).ToString();
+                    Display_Information(fedTaxDue, provTaxDue, income);
                     break;
                 case "sk":
                     provTaxDue = provTax.skTax(incomeProv);
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.skTax(provTaxDue), 2).ToString();
+                    Display_Information(fedTaxDue, provTaxDue, income);
                     break;
                 case "nwt":
                     provTaxDue = provTax.nwtTax(incomeProv);
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nwtTax(provTaxDue), 2).ToString();
+                    Display_Information(fedTaxDue, provTaxDue, income);
                     break;
                 case "on":
                     provTaxDue = provTax.onTax(incomeProv);
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.onTax(provTaxDue), 2).ToString();
+                    Display_Information(fedTaxDue, provTaxDue, income);
                     break;
                 case "ns":
                     provTaxDue = provTax.nsTax(incomeProv);
-                    lblProvTaxDue.Text = "$ " + Decimal.Round(provTax.nsTax(provTaxDue), 2).ToString();
+                    Display_Information(fedTaxDue, provTaxDue, income);
                     break;
-
             }
+
         }
 
         private void Enable_Inputs()
@@ -94,6 +96,15 @@ namespace PROG_210_Group_Assignment
             txtbxIncome.Enabled = true;
             bttnSubmit.Enabled = true;
             txtbxIncome.Text = "";
+        }
+
+        private void Display_Information(decimal fedTaxDue, decimal provTaxDue, decimal income)
+        {
+            lblProvTaxDue2.Text = "$ " + Decimal.Round(provTaxDue, 2).ToString();
+            lblFedTaxDue2.Text = "$ " + Decimal.Round(fedTaxDue, 2).ToString();
+            lblAnnualIncome2.Text = "$ " + Decimal.Round(income, 2).ToString();
+            decimal totalDue = fedTaxDue+ provTaxDue;
+            lblTotalTaxDue2.Text = "$ " + Decimal.Round(totalDue, 2).ToString();
         }
 
         private void cmbxProvince_SelectedIndexChanged(object sender, EventArgs e)

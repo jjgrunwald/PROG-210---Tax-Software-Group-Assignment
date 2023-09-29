@@ -159,7 +159,7 @@
             // 
             lblProvTaxDue.AutoSize = true;
             lblProvTaxDue.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblProvTaxDue.Location = new Point(421, 775);
+            lblProvTaxDue.Location = new Point(406, 775);
             lblProvTaxDue.Name = "lblProvTaxDue";
             lblProvTaxDue.Size = new Size(0, 18);
             lblProvTaxDue.TabIndex = 11;
@@ -184,7 +184,6 @@
             lblProvTaxDue2.Size = new Size(156, 21);
             lblProvTaxDue2.TabIndex = 12;
             lblProvTaxDue2.Text = "Provincial Tax Due:";
-            lblProvTaxDue2.Visible = false;
             // 
             // lblFedTaxDue2
             // 
@@ -196,13 +195,12 @@
             lblFedTaxDue2.Size = new Size(135, 21);
             lblFedTaxDue2.TabIndex = 14;
             lblFedTaxDue2.Text = "Federal Tax Due:";
-            lblFedTaxDue2.Visible = false;
             // 
             // lblFedTaxDue
             // 
             lblFedTaxDue.AutoSize = true;
             lblFedTaxDue.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblFedTaxDue.Location = new Point(421, 714);
+            lblFedTaxDue.Location = new Point(406, 714);
             lblFedTaxDue.Name = "lblFedTaxDue";
             lblFedTaxDue.Size = new Size(0, 18);
             lblFedTaxDue.TabIndex = 13;
@@ -217,13 +215,12 @@
             lblAnnualIncome.Size = new Size(170, 21);
             lblAnnualIncome.TabIndex = 18;
             lblAnnualIncome.Text = "2023 Annual Income:";
-            lblAnnualIncome.Visible = false;
             // 
             // lblAnnualIncome2
             // 
             lblAnnualIncome2.AutoSize = true;
             lblAnnualIncome2.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblAnnualIncome2.Location = new Point(421, 653);
+            lblAnnualIncome2.Location = new Point(406, 653);
             lblAnnualIncome2.Name = "lblAnnualIncome2";
             lblAnnualIncome2.Size = new Size(0, 18);
             lblAnnualIncome2.TabIndex = 17;
@@ -238,13 +235,12 @@
             lblTotalTaxDue.Size = new Size(133, 21);
             lblTotalTaxDue.TabIndex = 16;
             lblTotalTaxDue.Text = "Total Taxes Due:";
-            lblTotalTaxDue.Visible = false;
             // 
             // lblTotalTaxDue2
             // 
             lblTotalTaxDue2.AutoSize = true;
             lblTotalTaxDue2.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTotalTaxDue2.Location = new Point(421, 836);
+            lblTotalTaxDue2.Location = new Point(406, 836);
             lblTotalTaxDue2.Name = "lblTotalTaxDue2";
             lblTotalTaxDue2.Size = new Size(0, 18);
             lblTotalTaxDue2.TabIndex = 15;
@@ -259,7 +255,6 @@
             lblSummary.Size = new Size(172, 45);
             lblSummary.TabIndex = 19;
             lblSummary.Text = "Summary:";
-            lblSummary.Visible = false;
             // 
             // Form1
             // 
