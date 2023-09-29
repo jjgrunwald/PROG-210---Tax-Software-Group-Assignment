@@ -128,7 +128,7 @@ namespace PROG_210_Group_Assignment
                     break;
                 case 3:
                     picbxCanada.Image = nb;
-                    province = "nb";
+                    province = "nwt";
                     Enable_Inputs();
                     break;
                 case 4:
