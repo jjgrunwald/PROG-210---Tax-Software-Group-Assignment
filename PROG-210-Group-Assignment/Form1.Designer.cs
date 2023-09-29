@@ -39,7 +39,7 @@
             lblSubTitle = new Label();
             lblEditionTitle = new Label();
             lblDollar = new Label();
-            lblTaxesDue = new Label();
+            lblProvTaxDue = new Label();
             lblProvince = new Label();
             ((System.ComponentModel.ISupportInitialize)picbxCanada).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picbxLogo).BeginInit();
@@ -147,14 +147,14 @@
             lblDollar.TabIndex = 10;
             lblDollar.Text = "$";
             // 
-            // lblTaxesDue
+            // lblProvTaxDue
             // 
-            lblTaxesDue.AutoSize = true;
-            lblTaxesDue.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTaxesDue.Location = new Point(454, 516);
-            lblTaxesDue.Name = "lblTaxesDue";
-            lblTaxesDue.Size = new Size(0, 32);
-            lblTaxesDue.TabIndex = 11;
+            lblProvTaxDue.AutoSize = true;
+            lblProvTaxDue.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblProvTaxDue.Location = new Point(406, 514);
+            lblProvTaxDue.Name = "lblProvTaxDue";
+            lblProvTaxDue.Size = new Size(0, 32);
+            lblProvTaxDue.TabIndex = 11;
             // 
             // lblProvince
             // 
@@ -171,7 +171,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(846, 671);
-            Controls.Add(lblTaxesDue);
+            Controls.Add(lblProvTaxDue);
             Controls.Add(lblEditionTitle);
             Controls.Add(lblIncome);
             Controls.Add(lblProvince);
@@ -204,7 +204,7 @@
         private Label lblSubTitle;
         private Label lblEditionTitle;
         private Label lblDollar;
-        private Label lblTaxesDue;
+        private Label lblProvTaxDue;
         private Label lblProvince;
     }
 }

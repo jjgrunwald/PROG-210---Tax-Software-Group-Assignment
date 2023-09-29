@@ -18,6 +18,8 @@ namespace PROG_210_Group_Assignment
 
         public decimal income;
 
+        public string province;
+
         string[] provinceList = { "Alberta",  "British Columbia", "Saskatchewan",
                                     "North West Territories", "Ontario", "Nova Scotia"};
 
@@ -33,10 +35,34 @@ namespace PROG_210_Group_Assignment
             //Figure out which province is selected, and call the proper method.
 
             income = decimal.Parse(txtbxIncome.Text.ToString());
-/*            FedTax tax = new FedTax();*/
-/*            decimal fedTax = tax.fedTax(income);*/
+            /*            FedTax tax = new FedTax();*/
+            /*            decimal fedTax = tax.fedTax(income);*/
             ProvTax provTax = new ProvTax();
-            decimal abTax = provTax.abTax(income);
+
+
+
+            switch (province)
+            {
+                case "ab":
+                    lblProvTaxDue.Text = provTax.abTax(income).ToString();
+                    break;
+/*                case "bc":
+                    provTaxSum = provTax.bcTax(income);
+                    break;
+                case "sk":
+                    provTaxSum = provTax.abTax(income);
+                    break;
+                case "nb":
+                    provTaxSum = provTax.abTax(income);
+                    break;
+                case "on":
+                    provTaxSum = provTax.abTax(income);
+                    break;
+                case "ns":
+                    provTaxSum = provTax.abTax(income);
+                    break;
+               */
+            }
         }
 
         private void Enable_Inputs()
@@ -52,26 +78,32 @@ namespace PROG_210_Group_Assignment
             {
                 case 0:
                     picbxCanada.Image = ab;
+                    province = "ab";
                     Enable_Inputs();
                     break;
                 case 1:
                     picbxCanada.Image = bc;
+                    province = "bc";
                     Enable_Inputs();
                     break;
                 case 2:
                     picbxCanada.Image = sk;
+                    province = "sk";
                     Enable_Inputs();
                     break;
                 case 3:
                     picbxCanada.Image = nb;
+                    province = "nb";
                     Enable_Inputs();
                     break;
                 case 4:
                     picbxCanada.Image = on;
+                    province = "on";
                     Enable_Inputs();
                     break;
                 case 5:
                     picbxCanada.Image = ns;
+                    province = "ns";
                     Enable_Inputs();
                     break;
 
